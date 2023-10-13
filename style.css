@@ -1,0 +1,36 @@
+*{
+    font-family:'Pixelify Sans', sans-serif;
+}
+
+body{
+    background-color: gray;
+    color: rgb(255, 255, 255);
+    font-size: 2.5rem;
+}
+
+.vermelho{
+    color: red;
+}
+
+.verde{
+    color: rgb(0, 255, 251)
+}
+
+main{
+    width: 425px;
+    margin: 0 auto;
+    height: 100vh;
+}
+
+.botao{
+    border: 2px solid greenyellow;
+    background-color: black;
+    color: greenyellow;
+    font-size: 2rem;
+    padding: 0.625rem;
+}
+
+.botao-pi{
+
+}
+
