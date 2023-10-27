@@ -22,15 +22,51 @@ main{
     height: 100vh;
 }
 
+#par-ou-impar{
+    text-align: center;
+}
+
+#escolha-numeros{
+    display: none;
+    text-align: center;
+}
+
 .botao{
-    border: 2px solid greenyellow;
+    border: 2px solid rgb(47, 206, 255);
     background-color: black;
-    color: greenyellow;
+    color: rgb(47, 234, 255);
     font-size: 2rem;
     padding: 0.625rem;
+}
+
+.vermelho1{
+    color: red;
 }
 
 .botao-pi{
 
 }
+
+
+#resultado {
+    border: 2px solid rgb(47, 206, 255);
+    background-color: black;
+    color: rgb(47, 234, 255);
+    font-size: 2rem;
+    padding: 2rem;
+    margin: 2rem 0;
+    display: none;
+}
+
+.texto-resultado {
+    margin: 0;
+    
+}
+
+.caixa-jogar{
+    margin-top: 2rem;
+    text-align: center;
+}
+
+
 
