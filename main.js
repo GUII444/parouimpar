@@ -15,5 +15,18 @@ function escolherParOuImpar(parOuImpar){
 function escolhernumero(numerousuario) {
     this.numerousuario = numerousuario
     console.log(numerousuario)
+    desabilitarBotoes()
     return numerousuario
+}
+
+function desabilitarBotoes() {
+    for(i = 0; i <= 5; i++) {
+      document.getElementById('b' + i).setAttribute('disabled', true) 
+      document.getElementById('b' + i).classList.add('desabilitado') 
+    }
+}
+
+function selecionar(id) {
+    const botao = document.getElementById(id)
+    botao.classList.add('selecionado')
 }
