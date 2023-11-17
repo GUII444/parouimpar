@@ -1,7 +1,8 @@
 
 const painel1 = document.querySelector("#par-ou-impar")
 const painel2 = document.querySelector("#escolha-numeros")
-const painel3 = document.querySelector("#resultado")
+const resultado = document.querySelector("#resultado")
+const botaojogar = document.querySelector("#botao-jogar")
 
 function escolherParOuImpar(parOuImpar){
     this.parOuImpar = parOuImpar     
@@ -35,6 +36,39 @@ function escolherNumeroComputador() {
     console.log(numeroComputador)
 }
 
-function jogarParOuImpar(){
-    console.log('Chamou a função ...')
+function gerarTextoEscolhaUsuario(){
+    if(parOuImpar == 0) {
+    textoParOuImpar = "Par"
+    } else if (parOuImpar == 1){
+        textoParOuImpar = "Impar"
+    }
+
+    return textoParOuImpar
 }
+
+function verificarVencedor() {
+    if ( (numerousuario + numeroComputador) % 2 == parOuImpar) {
+        vencedor = "usuario" 
+    } else {
+        vencedor = "Computador"
+}
+    return vencedor 
+}
+
+function jogarParOuImpar(){
+    painel2.style.display = 'none'
+    resultado.style.display = 'block'
+    botaojogar.style.display = 'none'
+
+    resultado.innerHTML = "<h2 class='mensagem centralizado'>Resultado: </h2>"
+
+    var parOuImparEscolhido = gerarTextoEscolhaUsuario()
+    escolherNumeroComputador()
+    var nomeVencedor = verificarVencedor()
+
+    console.log ("Par Ou Impar ?" + parOuImpar)
+    console.log ("Usuario escolheu ?" + numerousuario)
+    console.log ("Computador escolheu?" + numeroComputador)
+    console.log ("Vencedor?" + nomeVencedor)
+}
+
