@@ -3,6 +3,7 @@ const painel1 = document.querySelector("#par-ou-impar")
 const painel2 = document.querySelector("#escolha-numeros")
 const resultado = document.querySelector("#resultado")
 const botaojogar = document.querySelector("#botao-jogar")
+const botaojogarnovamente = document.querySelector("#botao-jogar-novamente")
 
 function escolherParOuImpar(parOuImpar){
     this.parOuImpar = parOuImpar     
@@ -48,7 +49,7 @@ function gerarTextoEscolhaUsuario(){
 
 function verificarVencedor() {
     if ( (numerousuario + numeroComputador) % 2 == parOuImpar) {
-        vencedor = "usuario" 
+        vencedor = "Usuario" 
     } else {
         vencedor = "Computador"
 }
@@ -66,9 +67,12 @@ function jogarParOuImpar(){
     escolherNumeroComputador()
     var nomeVencedor = verificarVencedor()
 
-    console.log ("Par Ou Impar ?" + parOuImpar)
-    console.log ("Usuario escolheu ?" + numerousuario)
-    console.log ("Computador escolheu?" + numeroComputador)
-    console.log ("Vencedor?" + nomeVencedor)
+    resultado.innerHTML += "<br>Par Ou Impar ?" + parOuImparEscolhido
+    resultado.innerHTML += "<br>Usuario escolheu ?" + numerousuario
+    resultado.innerHTML += "<br>Computador escolheu?" + numeroComputador
+    nomeVencedor == "Usuario" ? frase = "Venceu, Você é bom" : frase = "Perdeu, Você é ruim"
+    resultado.innerHTML += "<br>" + frase
+
+    botaojogarnovamente.style.display = "block"
 }
 
